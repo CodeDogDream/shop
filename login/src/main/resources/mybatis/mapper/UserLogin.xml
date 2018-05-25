@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.login.dao.LoginDao">
+    <select id="findUserLogin" resultType="Login">
+        SELECT
+            username,
+            `password`,
+            salt,
+            UId
+        FROM login
+        WHERE username = #{username}
+    </select>
+    <insert id="addUserLogin">
+        INSERT INTO login (username, password, salt, UId)
+        VALUES (#{username}, #{password}, #{salt}, #{UId})
+    </insert>
+</mapper>
