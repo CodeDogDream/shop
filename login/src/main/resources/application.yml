@@ -31,7 +31,8 @@ spring:
       pool:
         max-idle: ${redis.max-idle}
         min-idle: ${redis.min-idle}
-    password: ${redis.password}
+    # 开发环境默认没有password
+    #password: ${redis.password}
   application:
     name: shop-login
 server:

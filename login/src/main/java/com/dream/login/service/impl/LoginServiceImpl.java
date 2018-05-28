@@ -23,7 +23,7 @@ public class LoginServiceImpl implements LoginService {
     private LoginDao loginDao;
 
     @Override
-    public void userLogin(String username, String password) throws UserLoginException {
+    public String userLogin(String username, String password) throws UserLoginException {
         Login userLogin = loginDao.findUserLogin(username);
         if (userLogin == null) {
             throw new UserLoginException("用户不存在");
@@ -32,7 +32,7 @@ public class LoginServiceImpl implements LoginService {
                 EncryptUtils.getMd5Pwd(userLogin.getSalt(), password))) {
             throw new UserLoginException("密码错误");
         }
-
+        return EncryptUtils.makeToken(username, userLogin.getUId());
     }
 
     @Override

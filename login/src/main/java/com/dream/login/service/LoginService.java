@@ -16,7 +16,7 @@ public interface LoginService {
      * @param password 密码
      * @throws UserLoginException 登录失败的异常
      */
-    void userLogin(String username, String password) throws UserLoginException;
+    String userLogin(String username, String password) throws UserLoginException;
 
     /**
      * 增加用户登录信息
