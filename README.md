@@ -6,4 +6,8 @@
 商品管理模块 product,
 支付模块 pay,
 订单管理模块 order，
-用户管理模块(忘记加了)
+用户管理模块 use，
+version1.0 ，目前觉得有点问题需要修改，
+配置的重复问题。以后重构。以后会使用采取dubbo或者springcloud来将所有
+dao和service抽取到一起，专注于sql的操作。
+

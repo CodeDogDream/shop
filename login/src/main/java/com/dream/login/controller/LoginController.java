@@ -1,10 +1,10 @@
 package com.dream.login.controller;
 
-import com.dream.login.entity.Login;
-import com.dream.login.exception.UserLoginException;
-import com.dream.login.service.LoginService;
-import com.dream.login.utils.EncryptUtils;
-import com.dream.login.utils.ResponseUtils;
+
+import com.dream.service.entity.Login;
+import com.dream.service.exception.UserLoginException;
+import com.dream.service.service.LoginService;
+import com.dream.service.utils.ResponseUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestBody;
